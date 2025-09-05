@@ -7,7 +7,7 @@
 #include "log.hpp"
 
 std::tuple<int, double, std::string> f() {
-    return std::make_tuple(1, 2.3, "456");
+    return std::make_tuple(1, 2.3, "4567");
 }
 
 int main() {

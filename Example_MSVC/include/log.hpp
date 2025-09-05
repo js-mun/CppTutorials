@@ -1,12 +1,10 @@
 
-// 기본 출력: 단일 값
 template <typename T>
 void append_to_stream(std::ostringstream& oss, T&& value)
 {
     oss << std::forward<T>(value);
 }
 
-// 재귀적으로 여러 인자를 처리
 template <typename T, typename... Args>
 void append_to_stream(std::ostringstream& oss, T&& first, Args&&... rest)
 {
@@ -14,7 +12,6 @@ void append_to_stream(std::ostringstream& oss, T&& first, Args&&... rest)
     append_to_stream(oss, std::forward<Args>(rest)...);
 }
 
-// Log 함수
 template <typename... Args>
 void Log(Args&&... args)
 {
